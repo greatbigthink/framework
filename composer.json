@@ -1,0 +1,13 @@
+{
+	"name": "greatbigthink/framework",
+	"description": "A nice Route-Model-View framework, made by a nice person.",
+	"license": "MIT",
+	"require": {
+		"greatbigthink/library": "1.*",
+		"phpmailer/phpmailer": "^5.2"
+	},
+	"config": {
+		"vendor-dir": "vendor"
+	},
+	"minimum-stability":"dev"
+}
