@@ -1,9 +1,10 @@
 {
 	"name": "greatbigthink/framework",
-	"description": "A nice Route-Model-View framework, made by a nice person.",
+	"description": "An express-like PHP framework.",
 	"license": "MIT",
 	"require": {
-		"greatbigthink/library": "*",
+		"greatbigthink/lib-core": "*",
+		"greatbigthink/lib-test": "*",
 		"phpmailer/phpmailer": "^5.2"
 	},
 	"config": {
