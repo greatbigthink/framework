@@ -1,6 +1,6 @@
 <?php
 
-$route->any('/', function(){
-	echo 'Hello World!';
-	exit;
+$route->any('/', function() use ($res, $req) {
+	$res->send_code(200)->render('index.html');
+
 });
