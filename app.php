@@ -1,19 +1,22 @@
 <?php
+namespace framework;
 
+use \framework\app as app;
+use \framework\session as session;
+use \framework\view as view;
+use \framework\autoload as autoload;
+
+define('ROOT', dirname(__FILE__));
+
+require ROOT . '/vendor/autoload.php';
 //=============================================================================
 //	Requires
 //=============================================================================
 
 define('ERROR_REPORTING', true);
 
-use \framework\session as session;
-use \framework\app as app;
-use \framework\view as view;
-use \framework\autoload as autoload;
-
 $app = new app();
 
-define('ROOT', dirname(__FILE__));
 $app->setting('model-path', ROOT . '/models');
 $app->setting('view-path', ROOT . '/views');
 $app->setting('public-path', ROOT . '/public');
@@ -21,12 +24,14 @@ $app->setting('vendor-path', ROOT . '/vendor');
 
 ############################################
 
-require $app->setting('vendor-path') . '/autoload.php';
+function debug( $output )
+{
+	echo '<pre>', print_r($output, $as_string = true), '</pre>';
+}
 
 ############################################
 
 $app->engine('twig');
-
 
 //=============================================================================
 //	INCLUDE THE ROUTES
