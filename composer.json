@@ -4,6 +4,7 @@
 	"license": "MIT",
 	"require": {
 		"greatbigthink/lib-core": "*",
+		"greatbigthink/lib-db": "*",
 		"greatbigthink/lib-test": "*",
 		"phpmailer/phpmailer": "^5.2"
 	},
